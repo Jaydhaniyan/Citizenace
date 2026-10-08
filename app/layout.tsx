@@ -13,9 +13,10 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "CitizenPrep AI — Pass Your US Citizenship Test with Confidence 🇺🇸",
-  description:
-    "Master the official USCIS Naturalization Test with 3D interactive flashcards, official 100 civics questions, and AI mock interview simulations.",
+  title: "CitizenPrep AI",
+
+  description: "US Citizenship Test Practice",
+
   keywords: [
     "US Citizenship Test",
     "USCIS Naturalization Test",
@@ -24,8 +25,11 @@ export const metadata: Metadata = {
     "N-400 Interview",
     "Naturalization Interview Practice",
   ],
-};
 
+  verification: {
+    google: "4mN9SD_DDp_2iZSunOa6J15gmpveYbVEDnn9vh5yDyU",
+  },
+};
 export default function RootLayout({
   children,
 }: Readonly<{
