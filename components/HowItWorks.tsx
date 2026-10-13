@@ -30,28 +30,28 @@ export default function HowItWorks() {
       title: "Practice Questions",
       badge: "Step 1: Learn & Drill",
       description:
-        "Master the official USCIS civics question bank with bite-sized daily quizzes and smart spaced-repetition flashcards customized to your state and elected officials.",
-      highlight: "128 Official USCIS Civics Questions",
+        "Master the official USCIS civics question bank with interactive practice quizzes and flashcards organized across core civics topics.",
+      highlight: "100 Official USCIS Civics Questions",
       icon: BookOpenCheck,
       gradient: "from-blue-600 to-blue-800",
     },
     {
       stepNumber: "02",
-      title: "Take AI Mock Interview",
-      badge: "Step 2: Voice Simulation",
+      title: "AI Civics Interview",
+      badge: "Step 2: Interview Practice",
       description:
-        "Simulate the actual naturalization interview face-to-face with an intelligent AI examiner. Practice answering Form N-400 questions and civics queries aloud.",
-      highlight: "Real-time Voice & Clarity Scoring",
+        "Practice answering essential civics questions in an interview format with instant feedback to test your recall and readiness.",
+      highlight: "Realistic Civics Question Drills",
       icon: Bot,
       gradient: "from-indigo-600 to-blue-700",
     },
     {
       stepNumber: "03",
-      title: "Track Progress & Pass",
-      badge: "Step 3: Exam Day Ready",
+      title: "Track Progress & Build Confidence",
+      badge: "Step 3: Measure Growth",
       description:
-        "Review comprehensive diagnostic analytics, achieve your 95%+ readiness threshold, and walk into your USCIS field office with total confidence and zero anxiety.",
-      highlight: "98.6% First-Attempt Success Rate",
+        "Review your personal quiz history, check your best accuracy scores, and build consistency to meet the USCIS 60% passing benchmark.",
+      highlight: "Personal Dashboard & Score Tracking",
       icon: Award,
       gradient: "from-blue-700 to-emerald-600",
     },
@@ -113,7 +113,7 @@ export default function HowItWorks() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-base sm:text-lg text-slate-600 mt-4 leading-relaxed max-w-2xl mx-auto"
           >
-            Our proven, data-driven study roadmap takes you from zero preparation to naturalization oath ceremony with total peace of mind.
+            Our structured study roadmap helps you practice civics questions, review flashcards, and build confidence at your own pace.
           </motion.p>
         </div>
 

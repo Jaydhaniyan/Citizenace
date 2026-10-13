@@ -20,42 +20,42 @@ export default function FAQ() {
       category: "Curriculum",
       question: "How many USCIS questions are included in CitizenPrep AI?",
       answer:
-        "CitizenPrep AI includes the full official 100 civics questions (2008 version currently in standard use) as well as the 128 questions bank. We automatically update answers whenever state governors, senators, and US representatives change, so your study material is always 100% accurate for your exact location and ZIP code.",
+        "CitizenPrep AI includes the full official 100 civics questions (2008 version currently in standard use for the Naturalization test). The questions cover American Government, American History, and Integrated Civics to help you prepare comprehensively.",
     },
     {
       id: "faq-2",
       category: "Pricing",
       question: "Is CitizenPrep AI really free to use?",
       answer:
-        "Yes! You can take unlimited free civics practice tests, study essential flashcards, and review the official reading & writing vocabulary list completely free without needing a credit card. We also offer an optional Premium pass for unlimited voice AI mock interviews and detailed predictive readiness analytics.",
+        "Yes! You can take unlimited civics practice tests, practice with interactive flashcards, and try AI civics interview simulations completely free. We are also preparing optional premium upgrades with extended study tools for a future update.",
     },
     {
       id: "faq-3",
       category: "AI Simulation",
-      question: "How does the AI Mock Interview simulate the real USCIS officer?",
+      question: "How does the AI Mock Interview simulate the USCIS exam?",
       answer:
-        "Using real-time speech recognition, our AI Naturalization Examiner conducts a realistic verbal interview. It asks both randomized civics questions and verifies your Form N-400 biographical answers, giving you instant constructive feedback on clarity, pronunciation, and confidence.",
+        "Our AI Civics Interview presents questions in an interview format with instant answer verification. You can practice responding to civics questions and immediately see whether your answer is correct along with helpful explanations.",
     },
     {
       id: "faq-4",
       category: "Compatibility",
       question: "Can I practice on mobile phones and tablets?",
       answer:
-        "CitizenPrep AI is built as a fully responsive web application that runs smoothly on any iPhone, iPad, Android device, or desktop computer. You don't need to download an app store package—simply open your browser and your progress automatically syncs across all your devices.",
+        "CitizenPrep AI is built as a responsive web application that runs smoothly on iPhone, iPad, Android, and desktop computers. You can practice conveniently on any device with a modern browser.",
     },
     {
       id: "faq-5",
       category: "Updates",
       question: "Is all content verified and updated for 2026?",
       answer:
-        "Yes, all questions, civics answers, cabinet members, Supreme Court Justices, and regional representatives are strictly verified and updated for 2026 USCIS testing requirements.",
+        "Yes, all questions and civics test materials are aligned with official USCIS Naturalization test requirements for 2026.",
     },
     {
       id: "faq-6",
-      category: "Languages",
-      question: "Does CitizenPrep AI support Spanish or other native languages?",
+      category: "Study Tips",
+      question: "How should I structure my daily study routine?",
       answer:
-        "Yes! CitizenPrep AI includes Spanish translation hints and dual-language audio explanations to assist native Spanish speakers in understanding complex legal and constitutional terminology while preparing for the English exam requirements (including qualifying 50/20 and 55/15 age exemptions).",
+        "We recommend practicing in short 10 to 15 minute daily sessions. Start with 10-question practice quizzes to benchmark your knowledge, review unfamiliar questions using flashcards, and test your recall with the simulated civics interview.",
     },
   ];
 

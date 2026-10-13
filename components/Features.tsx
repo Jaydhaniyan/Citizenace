@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 import { motion, Variants } from "framer-motion";
 import {
   HelpCircle,
@@ -23,6 +24,7 @@ interface Feature {
   icon: LucideIcon;
   gradient: string;
   highlights: string[];
+  href: string;
 }
 
 export default function Features() {
@@ -31,84 +33,90 @@ export default function Features() {
       id: "practice-quiz",
       title: "Practice Quiz",
       description:
-        "Timed and untimed civics tests with instant feedback covering American Government, History, and Integrated Civics.",
+        "Civics tests with instant scoring and explanations covering American Government, History, and Civics.",
       badge: "Most Popular",
       icon: HelpCircle,
       gradient: "from-blue-600 to-blue-800",
+      href: "/quiz",
       highlights: [
-        "10-question rapid drill sets",
-        "Official USCIS answer explanations",
-        "Updated state governor & senator questions",
+        "10-question practice test sets",
+        "Official USCIS civics question bank",
+        "Instant score percentage calculation",
       ],
     },
     {
       id: "flashcards",
-      title: "Spaced Flashcards",
+      title: "Civics Flashcards",
       description:
-        "Smart spaced-repetition flashcard deck that focuses on your historically difficult questions until you master them.",
+        "Interactive flip-to-reveal flashcards organized across core civics categories to reinforce memory recall.",
       badge: "Memory Engine",
       icon: Layers,
       gradient: "from-blue-700 to-indigo-800",
+      href: "/flashcards",
       highlights: [
         "Interactive 3D flip-to-reveal",
-        "Difficulty tagging & bookmarking",
         "Targeted study by category",
+        "Self-paced active recall practice",
       ],
     },
     {
       id: "ai-interview",
-      title: "AI Mock Interview",
+      title: "AI Civics Interview",
       description:
-        "Practice speaking with a voice-enabled AI examiner that simulates real USCIS N-400 naturalization interview dialogues.",
-      badge: "Voice Simulation",
+        "Simulated 15-question civics interview practice designed to test your knowledge in an interview format.",
+      badge: "Interview Prep",
       icon: Bot,
       gradient: "from-indigo-600 to-blue-700",
+      href: "/interview",
       highlights: [
-        "Real-time conversational speech scoring",
-        "Form N-400 eligibility drill questions",
-        "Confidence & pronunciation feedback",
+        "15 realistic civics interview questions",
+        "Instant answer feedback & validation",
+        "Passing benchmark evaluation",
       ],
     },
     {
-      id: "reading-practice",
-      title: "Reading Practice",
+      id: "study-dashboard",
+      title: "Study Dashboard",
       description:
-        "Master the official USCIS reading vocabulary bank with interactive digital tablet prompts mirroring the real exam.",
-      badge: "Official Vocab",
+        "Track your preparation journey with saved quiz results, personal high scores, and completed question counts.",
+      badge: "Progress Tracking",
       icon: BookOpen,
       gradient: "from-blue-700 to-sky-700",
+      href: "/dashboard",
       highlights: [
-        "Official USCIS reading sentence lists",
-        "Digital tablet interface simulation",
-        "Instant clarity & accuracy rating",
+        "Best and latest score tracking",
+        "Total questions completed counter",
+        "Past quiz attempt history",
       ],
     },
     {
-      id: "writing-practice",
-      title: "Writing Practice",
+      id: "account-sync",
+      title: "Google Account Sync",
       description:
-        "Practice English sentence dictation using digital stylus or keyboard input with automatic syntax verification.",
-      badge: "Dictation Simulator",
+        "Sign in seamlessly with Google to save your test records and synchronize your study progress securely.",
+      badge: "Cloud Sync",
       icon: PenTool,
       gradient: "from-slate-800 to-blue-900",
+      href: "/login",
       highlights: [
-        "Audio dictation sentence prompts",
-        "Real-time spelling & grammar checker",
-        "Exact USCIS scoring rubrics",
+        "Quick one-click Google Sign-In",
+        "Secure Firestore data persistence",
+        "Seamless access across study sessions",
       ],
     },
     {
-      id: "audio-pronunciation",
-      title: "Audio Pronunciation",
+      id: "test-analytics",
+      title: "Results & Scoring",
       description:
-        "Crystal-clear native English recordings available at normal and slow conversational speeds for non-native speakers.",
-      badge: "High-Fidelity",
+        "Detailed result summaries with accuracy percentages and USCIS 60% passing benchmark evaluation.",
+      badge: "Passing Insights",
       icon: Volume2,
       gradient: "from-blue-800 to-slate-900",
+      href: "/quiz",
       highlights: [
-        "Standard & slow speed playback",
-        "Bilingual Spanish transcript support",
-        "Phonetic breakdown of legal terms",
+        "Instant percentage score calculation",
+        "Pass/Fail indicator based on 60% standard",
+        "Review correct and incorrect answers",
       ],
     },
   ];
@@ -163,7 +171,7 @@ export default function Features() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight"
           >
-            Everything You Need to Pass Your Civics &amp; English Test
+            Everything You Need for Focused Civics Practice
           </motion.h2>
 
           <motion.p
@@ -173,7 +181,7 @@ export default function Features() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-base sm:text-lg text-slate-600 mt-4 leading-relaxed max-w-2xl mx-auto"
           >
-            The naturalization interview tests four distinct areas: Civics Knowledge, Speaking, Reading, and Writing. CitizenPrep AI prepares you for all four.
+            Prepare for the official USCIS civics test with interactive quizzes, smart flashcards, simulated interviews, and personal performance tracking.
           </motion.p>
         </div>
 
@@ -239,10 +247,13 @@ export default function Features() {
                   </div>
 
                   <div className="pt-2">
-                    <span className="inline-flex items-center gap-1.5 text-xs font-bold text-blue-700 group-hover:text-blue-800 transition-colors">
+                    <Link
+                      href={feature.href}
+                      className="inline-flex items-center gap-1.5 text-xs font-bold text-blue-700 hover:text-blue-800 transition-colors"
+                    >
                       <span>Explore {feature.title}</span>
                       <ArrowRight className="w-3.5 h-3.5 transition-transform duration-200 group-hover:translate-x-1" />
-                    </span>
+                    </Link>
                   </div>
                 </div>
               </motion.div>

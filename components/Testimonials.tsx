@@ -4,58 +4,51 @@ import React from "react";
 import { motion, Variants } from "framer-motion";
 import { Star, ShieldCheck, Quote, Sparkles, CheckCircle2 } from "lucide-react";
 
-interface Testimonial {
+interface Guideline {
   id: string;
   name: string;
-  country: string;
+  badge: string;
+  iconText: string;
   flag: string;
-  location: string;
-  naturalizedDate: string;
+  category: string;
   quote: string;
-  avatarUrl: string;
-  score: string;
+  statLabel: string;
 }
 
 export default function Testimonials() {
-  const testimonials: Testimonial[] = [
+  const guidelines: Guideline[] = [
     {
-      id: "maria",
-      name: "Maria Gonzalez",
-      country: "Mexico",
-      flag: "🇲🇽",
-      location: "Dallas, Texas",
-      naturalizedDate: "Naturalized May 2025",
+      id: "active-recall",
+      name: "Daily Active Recall",
+      badge: "Study Strategy",
+      iconText: "01",
+      flag: "🇺🇸",
+      category: "Consistency & Retention",
       quote:
-        "I was terrified of the speaking portion because English is my second language. The AI Mock Interview felt so authentic that when I sat down with the actual officer in Dallas, it felt just like another practice session. I passed with 6 out of 6 on my first try!",
-      avatarUrl:
-        "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=200&auto=format&fit=crop",
-      score: "6/6 Civics Correct",
+        "Focus on understanding the underlying principles of American democracy and historical events. Practicing short 10-question daily quizzes builds stronger long-term retention than cramming all at once.",
+      statLabel: "Daily Practice",
     },
     {
-      id: "priya",
-      name: "Priya Patel",
-      country: "India",
-      flag: "🇮🇳",
-      location: "San Jose, California",
-      naturalizedDate: "Naturalized January 2026",
+      id: "core-categories",
+      name: "Master the 4 Categories",
+      badge: "Topic Coverage",
+      iconText: "02",
+      flag: "🏛️",
+      category: "USCIS Question Bank",
       quote:
-        "The spaced repetition flashcards and state-specific governor/senator updates saved me dozens of study hours. The writing dictation practice is identical to the digital iPad test at the USCIS field office. Could not recommend CitizenPrep AI more!",
-      avatarUrl:
-        "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=200&auto=format&fit=crop",
-      score: "100% Reading & Writing",
+        "The official 100 civics questions span American Government, American History, Rights & Responsibilities, and Integrated Civics. Balancing your study across all categories ensures balanced test preparation.",
+      statLabel: "4 Core Topics",
     },
     {
-      id: "john",
-      name: "John Bautista",
-      country: "Philippines",
-      flag: "🇵🇭",
-      location: "Queens, New York",
-      naturalizedDate: "Naturalized February 2026",
+      id: "interview-prep",
+      name: "Simulated Interview Practice",
+      badge: "Exam Readiness",
+      iconText: "03",
+      flag: "🎓",
+      category: "Test Day Confidence",
       quote:
-        "CitizenPrep AI was hands down the best investment for my US naturalization journey. The clean interface without distracting ads let me practice during subway commutes. My oath ceremony is next week, and I feel so proud!",
-      avatarUrl:
-        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&auto=format&fit=crop",
-      score: "First-Attempt Pass",
+        "In the official interview, the USCIS officer asks civics questions aloud. Practicing with instant feedback on both flashcards and interview simulations helps you feel calm and confident on your test day.",
+      statLabel: "60% Pass Mark",
     },
   ];
 
@@ -99,7 +92,7 @@ export default function Testimonials() {
             className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-200/80 text-blue-800 text-xs font-bold uppercase tracking-wider mb-4 shadow-2xs"
           >
             <Sparkles className="w-3.5 h-3.5 text-blue-600" />
-            <span>Real Success Stories</span>
+            <span>Civics Study Guidelines</span>
           </motion.div>
 
           <motion.h2
@@ -109,7 +102,7 @@ export default function Testimonials() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight"
           >
-            Trusted by 25,000+ New US Citizens
+            Structured Civics Preparation Guidelines
           </motion.h2>
 
           <motion.p
@@ -119,11 +112,11 @@ export default function Testimonials() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-base sm:text-lg text-slate-600 mt-4 leading-relaxed max-w-2xl mx-auto"
           >
-            See how aspiring citizens from around the globe passed their USCIS Naturalization test on the very first try.
+            Essential strategies and best practices designed to help you master official USCIS civics material effectively.
           </motion.p>
         </div>
 
-        {/* 3 Testimonial Cards Grid */}
+        {/* 3 Guidelines Cards Grid */}
         <motion.div
           variants={containerVariants}
           initial="hidden"
@@ -131,7 +124,7 @@ export default function Testimonials() {
           viewport={{ once: true, margin: "-50px" }}
           className="grid grid-cols-1 md:grid-cols-3 gap-8"
         >
-          {testimonials.map((item) => (
+          {guidelines.map((item) => (
             <motion.div
               key={item.id}
               variants={cardVariants}
@@ -163,14 +156,12 @@ export default function Testimonials() {
               <div className="pt-5 border-t border-slate-100 flex items-center justify-between">
                 <div className="flex items-center gap-3">
                   <div className="relative">
-                    <img
-                      src={item.avatarUrl}
-                      alt={item.name}
-                      className="w-11 h-11 rounded-full object-cover ring-2 ring-blue-100"
-                    />
+                    <div className="w-11 h-11 rounded-full bg-gradient-to-br from-blue-700 to-indigo-800 text-white font-black text-sm flex items-center justify-center ring-2 ring-blue-100 shadow-xs">
+                      {item.iconText}
+                    </div>
                     <span
                       className="absolute -bottom-1 -right-1 text-xs"
-                      title={item.country}
+                      title={item.name}
                     >
                       {item.flag}
                     </span>
@@ -181,7 +172,7 @@ export default function Testimonials() {
                       {item.name}
                     </h4>
                     <p className="text-xs text-slate-500 font-medium">
-                      {item.location}
+                      {item.category}
                     </p>
                   </div>
                 </div>
@@ -189,10 +180,10 @@ export default function Testimonials() {
                 <div className="text-right">
                   <span className="inline-flex items-center gap-1 text-[11px] font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-md border border-emerald-200/60">
                     <CheckCircle2 className="w-3 h-3" />
-                    <span>{item.score}</span>
+                    <span>{item.statLabel}</span>
                   </span>
                   <div className="text-[10px] text-slate-400 mt-1 font-medium">
-                    {item.naturalizedDate}
+                    {item.badge}
                   </div>
                 </div>
               </div>
@@ -210,7 +201,7 @@ export default function Testimonials() {
         >
           <ShieldCheck className="w-5 h-5 text-blue-700 flex-shrink-0" />
           <span>
-            98.6% of applicants who finish our study roadmap pass on their first attempt.
+            Aligned with official USCIS Naturalization Civics Test guidelines.
           </span>
         </motion.div>
 

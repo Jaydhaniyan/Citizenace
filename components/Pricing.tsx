@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Link from "next/link";
 import { motion, Variants } from "framer-motion";
 import {
   Check,
@@ -16,23 +17,20 @@ export default function Pricing() {
 
   const freeFeatures = [
     "Full 100 Official USCIS Civics Questions",
-    "Daily Rapid Practice Quizzes",
-    "Essential Spaced Repetition Flashcards",
-    "Official Reading & Writing Vocabulary Bank",
-    "Basic Progress & Streak Tracking",
-    "Mobile & Tablet Responsive Access",
+    "10-Question Rapid Practice Quizzes",
+    "Interactive Flip-to-Reveal Flashcards",
+    "Personal Dashboard & Score Tracking",
+    "USCIS 60% Passing Benchmark Evaluation",
+    "Mobile & Desktop Responsive Access",
   ];
 
   const premiumFeatures = [
     "Everything included in the Free plan",
-    "Unlimited Voice AI Mock Interviews (N-400 & Civics)",
-    "Complete 128 Civics Bank with State Official Updates",
-    "Real-Time Speech Clarity & Pronunciation Feedback",
-    "Official Digital Tablet Reading & Writing Simulator",
-    "AI Weakness Diagnostics & 95%+ Readiness Score",
-    "Bilingual Spanish Terminology Audio & Translations",
-    "100% Money-Back Pass Guarantee",
-    "Priority 24/7 Naturalization Support",
+    "Extended Civics Interview Simulation Drills",
+    "Comprehensive Progress History & Analytics",
+    "Category-Specific Drill Sets",
+    "Priority Updates & New Civics Question Sets",
+    "Ad-Free Premium Study Environment",
   ];
 
   const cardVariants: Variants = {
@@ -81,7 +79,7 @@ export default function Pricing() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-base sm:text-lg text-slate-600 mt-4 leading-relaxed max-w-2xl mx-auto"
           >
-            Start free with full civics question access, or unlock realistic voice AI mock interviews and our 100% Pass Guarantee.
+            Practice for free today with core civics questions and flashcards. Optional premium upgrades will be available in an upcoming update.
           </motion.p>
 
           {/* Billing Cycle Toggle */}
@@ -178,13 +176,13 @@ export default function Pricing() {
             </div>
 
             {/* CTA Button */}
-            <a
-              href="#practice"
+            <Link
+              href="/quiz"
               className="w-full inline-flex items-center justify-center gap-2 py-4 px-6 text-sm font-bold text-slate-800 bg-white hover:bg-slate-50 border border-slate-200/90 rounded-2xl shadow-xs hover:shadow-sm transition-all duration-200"
             >
               <span>Start Free Practice</span>
               <ArrowRight className="w-4 h-4" />
-            </a>
+            </Link>
           </motion.div>
 
           {/* 2. Premium Plan Card (Highlighted) */}
@@ -202,8 +200,8 @@ export default function Pricing() {
             
             <div className="absolute top-4 right-6">
               <span className="inline-flex items-center gap-1 text-[11px] font-extrabold uppercase tracking-wider px-3 py-1 rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white shadow-md border border-blue-400/30">
-                <Zap className="w-3 h-3 fill-current" />
-                <span>Most Popular</span>
+                <Sparkles className="w-3 h-3 fill-current" />
+                <span>Coming Soon</span>
               </span>
             </div>
 
@@ -213,7 +211,7 @@ export default function Pricing() {
                   CitizenPrep Premium
                 </h3>
                 <p className="text-xs sm:text-sm text-slate-300 mt-1">
-                  Full voice AI simulations, N-400 review &amp; Pass Guarantee.
+                  Upcoming expanded test preparation tools and extended simulations.
                 </p>
               </div>
 
@@ -227,16 +225,16 @@ export default function Pricing() {
                     {billingCycle === "monthly" ? "/ month" : " one-time"}
                   </span>
                 </div>
-                <p className="text-xs text-emerald-400 mt-1 font-semibold flex items-center gap-1.5">
-                  <ShieldCheck className="w-4 h-4" />
-                  <span>Pass Your USCIS Interview or 100% Refund</span>
+                <p className="text-xs text-blue-300 mt-1 font-semibold flex items-center gap-1.5">
+                  <ShieldCheck className="w-4 h-4 text-blue-400" />
+                  <span>Preview pricing • Premium upgrades coming soon</span>
                 </p>
               </div>
 
               {/* Feature List */}
               <div className="space-y-3.5 mb-8">
                 <p className="text-xs font-bold uppercase tracking-wider text-blue-300">
-                  Everything in Free, plus:
+                  Upcoming in Premium:
                 </p>
                 {premiumFeatures.map((feat) => (
                   <div key={feat} className="flex items-start gap-3 text-xs sm:text-sm text-slate-200">
@@ -250,27 +248,27 @@ export default function Pricing() {
             </div>
 
             {/* CTA Button */}
-            <a
-              href="#premium"
+            <Link
+              href="/pricing"
               className="w-full inline-flex items-center justify-center gap-2 py-4 px-6 text-sm font-extrabold text-white bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 rounded-2xl shadow-lg shadow-blue-600/30 transition-all duration-200 transform active:scale-98"
             >
-              <span>Get Premium Pass</span>
+              <span>View Upcoming Plans</span>
               <ArrowRight className="w-4 h-4" />
-            </a>
+            </Link>
           </motion.div>
 
         </div>
 
-        {/* Bottom Guarantee Banner */}
+        {/* Bottom Info Banner */}
         <div className="mt-14 text-center max-w-2xl mx-auto flex flex-wrap items-center justify-center gap-6 text-xs text-slate-500 font-medium">
           <span className="flex items-center gap-1.5">
             <ShieldCheck className="w-4 h-4 text-emerald-600" />
-            <span>30-Day Money-Back Guarantee</span>
+            <span>Full Free Access Available Now</span>
           </span>
           <span className="text-slate-300">•</span>
-          <span>No recurring charges on Lifetime Pass</span>
+          <span>No Credit Card Required</span>
           <span className="text-slate-300">•</span>
-          <span>256-Bit SSL Encrypted Checkout</span>
+          <span>Premium Features Launching Soon</span>
         </div>
 
       </div>

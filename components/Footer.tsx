@@ -11,12 +11,12 @@ import {
 
 export default function Footer() {
   const quickLinks = [
-    { label: "Practice Quiz", href: "#features" },
-    { label: "Spaced Flashcards", href: "#features" },
-    { label: "AI Mock Interview", href: "#features" },
+    { label: "Practice Quiz", href: "/quiz" },
+    { label: "Civics Flashcards", href: "/flashcards" },
+    { label: "AI Interview", href: "/interview" },
+    { label: "Dashboard", href: "/dashboard" },
+    { label: "Pricing & Plans", href: "/pricing" },
     { label: "How It Works", href: "#how-it-works" },
-    { label: "Pricing & Plans", href: "#pricing" },
-    { label: "Success Stories", href: "#testimonials" },
   ];
 
   const resources = [
@@ -55,24 +55,24 @@ export default function Footer() {
                 Ready to Pass Your US Naturalization Test?
               </h3>
               <p className="text-sm text-slate-400 mt-1 max-w-xl">
-                Join over 25,000+ applicants who passed on their first attempt with CitizenPrep AI.
+                Prepare with confidence for your US Naturalization civics test with CitizenPrep AI.
               </p>
             </div>
 
             <div className="flex items-center gap-3">
-              <a
-                href="#practice"
+              <Link
+                href="/quiz"
                 className="inline-flex items-center gap-2 px-6 py-3.5 text-sm font-bold text-white bg-blue-600 hover:bg-blue-500 rounded-xl shadow-lg shadow-blue-600/20 transition-all duration-200"
               >
                 <span>Start Free Test</span>
                 <ArrowRight className="w-4 h-4" />
-              </a>
-              <a
-                href="#pricing"
+              </Link>
+              <Link
+                href="/pricing"
                 className="inline-flex items-center gap-2 px-6 py-3.5 text-sm font-bold text-slate-300 hover:text-white bg-slate-800 hover:bg-slate-700 rounded-xl border border-slate-700 transition-all duration-200"
               >
                 <span>View Plans</span>
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -105,7 +105,7 @@ export default function Footer() {
               </Link>
 
               <p className="text-sm text-slate-400 leading-relaxed mt-4 max-w-sm">
-                The premier AI-powered naturalization exam platform helping immigrants achieve the American dream through interactive civics quizzes, flashcards, and realistic voice officer simulations.
+                The premier naturalization exam preparation platform helping applicants prepare for the civics test through interactive quizzes, flashcards, simulated interview practice, and progress tracking.
               </p>
             </div>
 

@@ -67,42 +67,40 @@ export default function Stats() {
   const stats: StatItem[] = [
     {
       id: "questions",
-      value: 128,
+      value: 100,
       label: "Official USCIS Questions",
-      sublabel: "Complete 100 & 128 civics test banks verified for 2026",
+      sublabel: "Comprehensive question bank aligned with official USCIS test material",
       icon: FileCheck,
       gradient: "from-blue-600 to-blue-800",
       badge: "USCIS 2026",
     },
     {
-      id: "interviews",
-      value: 50000,
-      prefix: "+",
-      label: "AI Mock Interviews",
-      sublabel: "Voice simulations completed with instant pronunciation scoring",
-      icon: Bot,
-      gradient: "from-indigo-600 to-blue-700",
-      badge: "Speech AI",
-    },
-    {
-      id: "streak",
-      value: 98,
-      suffix: "%",
-      label: "First-Try Pass Rate",
-      sublabel: "Applicants who maintain a 7-day practice streak pass with ease",
+      id: "categories",
+      value: 4,
+      label: "Core Study Categories",
+      sublabel: "American Government, History, Rights, and Civics organized for clear focus",
       icon: Flame,
       gradient: "from-blue-700 to-sky-600",
-      badge: "Proven",
+      badge: "Structured",
+    },
+    {
+      id: "interview",
+      value: 15,
+      label: "Civics Interview Questions",
+      sublabel: "Simulated interview practice with instant feedback on each response",
+      icon: Bot,
+      gradient: "from-indigo-600 to-blue-700",
+      badge: "Interview",
     },
     {
       id: "tracking",
       value: 100,
       suffix: "%",
-      label: "Progress Tracking",
-      sublabel: "Real-time mastery index across Civics, Reading, and Writing",
+      label: "Practice At Your Own Pace",
+      sublabel: "Track test scores, review accuracy, and build study consistency",
       icon: TrendingUp,
       gradient: "from-blue-800 to-indigo-900",
-      badge: "Analytics",
+      badge: "Self-Paced",
     },
   ];
 
@@ -142,7 +140,7 @@ export default function Stats() {
             className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50 border border-blue-200/80 text-blue-800 text-xs font-bold uppercase tracking-wider mb-3 shadow-2xs"
           >
             <Sparkles className="w-3.5 h-3.5 text-blue-600" />
-            <span>Proven Success Metrics</span>
+            <span>Structured Preparation</span>
           </motion.div>
           <motion.h2
             initial={{ opacity: 0, y: 16 }}
@@ -160,7 +158,7 @@ export default function Stats() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-sm sm:text-base text-slate-600 mt-2"
           >
-            Every question, flashcard, and AI voice prompt is built to maximize memory retention and speaking confidence.
+            Every question, flashcard, and civics interview prompt is built to maximize memory retention and test confidence.
           </motion.p>
         </div>
 

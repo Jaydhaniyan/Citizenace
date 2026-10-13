@@ -131,11 +131,11 @@ export default function FloatingQuizCards() {
           <div>
             <div className="flex items-center gap-1 text-[11px] font-bold text-slate-500 uppercase tracking-wider">
               <span>Readiness</span>
-              <span className="text-emerald-600 font-extrabold">• Pass Guaranteed</span>
+              <span className="text-emerald-600 font-extrabold">• USCIS Target</span>
             </div>
             <div className="text-xl font-black text-slate-900 tracking-tight flex items-baseline gap-1">
-              <span>98.4%</span>
-              <span className="text-xs font-semibold text-emerald-600">+12% this week</span>
+              <span>85%</span>
+              <span className="text-xs font-semibold text-emerald-600">Passing is 60%</span>
             </div>
           </div>
         </div>

@@ -27,7 +27,7 @@ export default function DemoModal({ isOpen, onClose }: DemoModalProps) {
               <h3 className="text-base font-bold text-slate-900">
                 CitizenPrep AI Interactive Walkthrough
               </h3>
-              <p className="text-xs text-slate-500">See how you pass on your very first try</p>
+              <p className="text-xs text-slate-500">See how CitizenPrep AI helps you prepare</p>
             </div>
           </div>
           <button
@@ -42,8 +42,8 @@ export default function DemoModal({ isOpen, onClose }: DemoModalProps) {
         <div className="flex border-b border-slate-200 bg-white px-6 gap-2 pt-3">
           {[
             { id: "quiz", label: "1. 100 Civics Quiz" },
-            { id: "interview", label: "2. Voice AI Interview" },
-            { id: "report", label: "3. Pass Readiness" },
+            { id: "interview", label: "2. AI Civics Interview" },
+            { id: "report", label: "3. Progress Tracking" },
           ].map((tab) => (
             <button
               key={tab.id}
@@ -96,12 +96,12 @@ export default function DemoModal({ isOpen, onClose }: DemoModalProps) {
                     </div>
                     <div>
                       <div className="text-xs font-semibold text-blue-300">USCIS Simulation Officer</div>
-                      <div className="text-sm font-bold">Officer Miller (Voice Active)</div>
+                      <div className="text-sm font-bold">Officer Miller (Interactive Practice)</div>
                     </div>
                   </div>
-                  <span className="px-2.5 py-1 text-[11px] font-bold bg-red-600/20 text-red-300 border border-red-500/30 rounded-full flex items-center gap-1.5">
-                    <span className="w-2 h-2 rounded-full bg-red-500 animate-ping" />
-                    Live Audio
+                  <span className="px-2.5 py-1 text-[11px] font-bold bg-blue-600/30 text-blue-200 border border-blue-500/30 rounded-full flex items-center gap-1.5">
+                    <span className="w-2 h-2 rounded-full bg-blue-400" />
+                    Civics Interview
                   </span>
                 </div>
                 <div className="space-y-3 font-sans text-sm">
@@ -115,13 +115,13 @@ export default function DemoModal({ isOpen, onClose }: DemoModalProps) {
                       &ldquo;Yes, I do.&rdquo;
                     </p>
                     <span className="text-[11px] text-emerald-300 mt-1 block">
-                      ✓ Clarity: 99% • Confidence: High
+                      ✓ Instant Answer Feedback &amp; Verification
                     </span>
                   </div>
                 </div>
               </div>
               <p className="text-xs text-slate-600">
-                Practice answering Form N-400 eligibility questions aloud so you never freeze during your actual appointment.
+                Practice answering civics interview questions with instant feedback to build confidence before your official interview.
               </p>
             </div>
           )}
@@ -130,21 +130,21 @@ export default function DemoModal({ isOpen, onClose }: DemoModalProps) {
             <div className="space-y-4">
               <div className="grid grid-cols-3 gap-3">
                 <div className="p-4 bg-blue-50 border border-blue-100 rounded-2xl text-center">
-                  <div className="text-2xl font-black text-blue-900">98.4%</div>
-                  <div className="text-xs font-semibold text-blue-700 mt-0.5">Overall Readiness</div>
+                  <div className="text-2xl font-black text-blue-900">100</div>
+                  <div className="text-xs font-semibold text-blue-700 mt-0.5">Official Questions</div>
                 </div>
                 <div className="p-4 bg-emerald-50 border border-emerald-100 rounded-2xl text-center">
-                  <div className="text-2xl font-black text-emerald-800">100/100</div>
-                  <div className="text-xs font-semibold text-emerald-700 mt-0.5">Civics Mastered</div>
+                  <div className="text-2xl font-black text-emerald-800">4</div>
+                  <div className="text-xs font-semibold text-emerald-700 mt-0.5">Study Categories</div>
                 </div>
                 <div className="p-4 bg-indigo-50 border border-indigo-100 rounded-2xl text-center">
-                  <div className="text-2xl font-black text-indigo-900">100%</div>
-                  <div className="text-xs font-semibold text-indigo-700 mt-0.5">Reading & Writing</div>
+                  <div className="text-2xl font-black text-indigo-900">60%</div>
+                  <div className="text-xs font-semibold text-indigo-700 mt-0.5">Passing Standard</div>
                 </div>
               </div>
               <div className="bg-slate-50 p-4 rounded-2xl border border-slate-200 text-xs text-slate-600 space-y-1">
-                <div className="font-bold text-slate-900">USCIS Pass Guarantee</div>
-                <p>When all 3 categories reach the 95% threshold, you are statistically primed to pass on your first attempt.</p>
+                <div className="font-bold text-slate-900">Personal Dashboard &amp; Analytics</div>
+                <p>Track your best scores, questions completed, and latest quiz history to measure your study consistency over time.</p>
               </div>
             </div>
           )}
@@ -159,7 +159,7 @@ export default function DemoModal({ isOpen, onClose }: DemoModalProps) {
             Close
           </button>
           <a
-            href="#practice"
+            href="/quiz"
             onClick={onClose}
             className="inline-flex items-center gap-2 px-5 py-2.5 text-xs sm:text-sm font-bold text-white bg-blue-700 hover:bg-blue-800 rounded-xl shadow-sm transition-colors"
           >
